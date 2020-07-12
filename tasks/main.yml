@@ -1,0 +1,8 @@
+---
+# tasks file for jnvilo.letsencrypts
+
+- name: cloudflare 
+  include: cloudflare.yml
+  #when: letsencrypt_method == "letsencrypt"
+
+

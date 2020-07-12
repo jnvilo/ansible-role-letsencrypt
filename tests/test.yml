@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  remote_user: root
+  
+  tasks:
+    - name: Test role with variables
+      include_role:
+        name: ../jnvilo.cloudflare
+      vars:
+        letsencrypt_email: "admin@jnvilo.com"
+        cloudflare_email: "admin@jnvilo.com"
+        cloudflare_domain: "jnvilo.com"
+        cloudflare_api_key: "AAABBBCCCDDDEEE111222333"
+        certificate_directory: "/tmp/cert_test"
+        letsencrypt_key_directory: "/tmp/cert_test/letsencrypt"
+        include_intermediate: yes
